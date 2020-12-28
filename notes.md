@@ -14,3 +14,20 @@
 
 
 ## Ch2: Observer Pattern
+
+- loose coupling: practice of avoiding interdependencies between classes. In other words, classes should only need to know about the interfaces of the classes they interact with, but not the data or method implementations of other classes.
+
+- analogy to understand observer pattern:
+    - subject: a newspaper company
+    - observers: subscribers to the newspaper company
+
+- Observer pattern uses 2 interfaces:
+    1. subject
+        - has a method to register an observer
+        - has a second method to unsubscribe an observer
+        - has a third method to notify all observers of state changes
+    1. observer
+        - has a method that to update itself based on data obtained from the subject
+        - on changes, observers may do something else with the new data
+
+- The order in which the observers are updated and execute their side effects is not necessarily fixed. 
