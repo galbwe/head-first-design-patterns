@@ -30,4 +30,6 @@
         - has a method that to update itself based on data obtained from the subject
         - on changes, observers may do something else with the new data
 
-- The order in which the observers are updated and execute their side effects is not necessarily fixed. 
+- The order in which the observers are updated and execute their side effects is not necessarily fixed.
+
+## Ch3: Decorator Pattern
