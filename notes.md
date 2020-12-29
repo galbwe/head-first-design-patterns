@@ -52,3 +52,10 @@
 - Continuing mantra: program to an interface, not an implementation
 - In java, whenever you use the `new` keyword, you are programming to an implementation.
 - The idea behind the factory pattern is that the implementation has to go somewhere, so it should be encapsulated so that if the concrete types change, the code only needs to change in one place.
+- Often implement the factory pattern with a factory method: this is an abstract method on a class responsible for instantiating objects which is defined in a base class.
+- Definition: the factory method pattern defines an interface for creating an object, but lets a subclass decide which class of object to instantiate.
+- Dependency Inversion Principle: make classes that depend on abstractions, do not write classes that depend on concrete classes.
+- Rules of Thumb that help a young programmer adhere to the dependency inversion principle:
+    - No variable should directly reference a concrete class. Instead use a factory method.
+    - Avoid subclassing a concrete class. Only subclass from an abstraction.
+    - Avoid overriding a method that has an implementation. Instead override abstract methods.

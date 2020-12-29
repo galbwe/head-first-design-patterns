@@ -1,19 +1,15 @@
 package ch4;
 
-public class PizzaStore {
-    static SimplePizzaFactory factory = new SimplePizzaFactory();
-    public static void main(String[] args) {
-        makePizza("cheese");
-        makePizza("pepperoni");
-        makePizza("clam");
-        makePizza("veggie");
-    }
+public abstract class PizzaStore {
 
-    static void makePizza(String type) {
-        Pizza pizza = factory.createPizza(type);
+    public abstract Pizza createPizza(String type);
+
+    public Pizza orderPizza(String type) {
+        Pizza pizza = createPizza(type);
         pizza.prepare();
         pizza.bake();
         pizza.cut();
         pizza.box();
+        return pizza;
     }
 }
