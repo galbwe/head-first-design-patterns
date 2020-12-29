@@ -1,64 +1,31 @@
 package ch3;
 
-public class Beverage {
-    String description = "A generic beverage.";
-    private boolean milk;
-    private boolean soy;
-    private boolean mocha;
-    private boolean whip;
+abstract class Beverage {
+    String description;
 
-    public float cost() {
-        float total = 0;
-        if (hasMilk()) {
-            total = total + 0.75f;
-        }
-        if (hasSoy()) {
-            total = total + 0.5f;
-        }
-        if (hasMocha()) {
-            total = total + 1.00f;
-        }
-        if (hasWhip()) {
-            total = total + 0.75f;
-        }
-        return total;
-    }
+    public enum Size { TALL, GRANDE, VENTI };
+
+    Size size = Size.TALL;
+    abstract public float cost() throws Exception;
 
     String getDescription() {
-        return description;
+        String result = description;
+        if (size == Size.TALL) {
+            result = "Size Tall. " + result;
+        } else if (size == Size.VENTI) {
+            result = "Size Venti. " + result;
+        } else if (size == Size.GRANDE) {
+            result = "Size Grande. " + result;
+        }
+        return result;
     }
 
-    boolean hasMilk() {
-        return milk;
+    public void setSize(Size size) {
+        this.size = size;
     }
 
-    void setMilk(boolean milk) {
-        this.milk = milk;
+    public Size getSize() {
+            return this.size;
     }
-
-    boolean hasMocha() {
-        return mocha;
-    }
-
-    void setMocha(boolean mocha) {
-        this.mocha = mocha;
-    }
-
-    boolean hasSoy() {
-        return soy;
-    }
-
-    void setSoy(boolean soy) {
-        this.soy = soy;
-    }
-
-    boolean hasWhip() {
-        return whip;
-    }
-
-    void setWhip(boolean whip) {
-        this.whip = whip;
-    }
-
 
 }

@@ -33,3 +33,12 @@
 - The order in which the observers are updated and execute their side effects is not necessarily fixed.
 
 ## Ch3: Decorator Pattern
+
+- open closed principle: classes should be open to extension but closed to modification
+    - means that new behavior should be added by writing new code, instead of changing existing code. This will help prevent unintended bugs.
+
+- Decorator pattern:
+    1. Create a decorator class that
+        1. subclasses the decorated class
+        1. Has a decorated object that is the same type as the decorated class
+        1. Implement the same interface as the decorated class in the decorator, using the decorated objects interface where necessary.
