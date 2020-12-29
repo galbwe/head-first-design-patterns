@@ -42,3 +42,13 @@
         1. subclasses the decorated class
         1. Has a decorated object that is the same type as the decorated class
         1. Implement the same interface as the decorated class in the decorator, using the decorated objects interface where necessary.
+
+- be careful when adding decorator pattern to code that may depend on types of objects
+    - Factory and builder patterns may help with this issue
+
+
+## Ch4: Factory Pattern
+
+- Continuing mantra: program to an interface, not an implementation
+- In java, whenever you use the `new` keyword, you are programming to an implementation.
+- The idea behind the factory pattern is that the implementation has to go somewhere, so it should be encapsulated so that if the concrete types change, the code only needs to change in one place.
