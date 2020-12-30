@@ -59,3 +59,5 @@
     - No variable should directly reference a concrete class. Instead use a factory method.
     - Avoid subclassing a concrete class. Only subclass from an abstraction.
     - Avoid overriding a method that has an implementation. Instead override abstract methods.
+- Difference between factory method pattern and abstract factory pattern:
+    - The factory method pattern uses inheritance to give a class a method for constructing objects, whereas an abstract factory pattern uses object composition to provide a class with a factory object whose interface defines methods for constructing objects.
